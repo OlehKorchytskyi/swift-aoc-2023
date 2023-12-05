@@ -1,15 +1,12 @@
 # Advent of Code 2023
 
-This project showcases my solutions for each day's challenge in Swift, following a structured format inspired by the [swift-aoc-starter-example](https://github.com/apple/swift-aoc-starter-example) template.
+This project showcases my solutions for each day's challenge in Swift.
 
 ## Project Structure
 
-- `Sources/` 
-  - Each day's Swift file is organized here (e.g., `Day01.swift`).
-  - `Data/` 
-    - Input data files for each day (e.g., `Day01.txt`).
-- `Tests/` 
-  - Test files for each day (e.g., `Day01.swift`).
+- `Sources/Data/Day##.txt`: the input data provided for the challenge;
+- `Sources/Day##.swift`: the code to solve the challenge;
+- `Tests/Day##.swift`: unit tests for par1 and part2 of the challenge.
 
 ## How to Run
 
