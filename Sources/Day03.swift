@@ -109,7 +109,6 @@ private struct View: Hashable {
         }
         
         return number
-//        Int(String(characters))!
     }
     
     init(position: Position, character: Character) {
@@ -121,10 +120,6 @@ private struct View: Hashable {
     mutating func append(_ character: Character) {
         characters.append(character)
         frame.length += 1
-    }
-    
-    var allPositions: [Position] {
-        (frame.position.x..<(frame.position.x + frame.length)).map { Position($0, frame.position.y) }
     }
     
 }
@@ -178,7 +173,6 @@ extension View {
     }
     
     func hasAdjacentSymbols(in schematic: EngineSchematic) -> Bool {
-        
         for move in possibleDirections(in: schematic) {
             let position = Position(frame.position.x + move.x, frame.position.y + move.y)
             if schematic.hasSymbol(at: position.x, position.y) {
@@ -187,7 +181,6 @@ extension View {
         }
         
         return false
-        
     }
     
     
@@ -198,9 +191,6 @@ extension Day03 {
     
     private func part1Solution1() -> Int {
         var sum: Int = 0
-        
-//        var numberViews: [View] = []
-//        var schematic = engineSchematic
 
         for y in 0..<engineSchematic.height {
             
@@ -224,22 +214,10 @@ extension Day03 {
                     if view.hasAdjacentSymbols(in: engineSchematic) {
                         sum += view.number
                     }
-                    
-//                    numberViews.append(view)
                 }
             }
             
         }
-        
-//        for view in numberViews where view.hasAdjacentSymbols(in: engineSchematic) {
-//            for position in view.allPositions {
-//                schematic[characterAt: position.x, position.y] = " "
-//            }
-//        }
-        
-//        for row in schematic.scheme {
-//            print(String(row))
-//        }
         
         return sum
     }
