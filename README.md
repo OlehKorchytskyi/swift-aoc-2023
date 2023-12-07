@@ -16,10 +16,10 @@ To run the solutions, you can use the following command:
 swift run AdventOfCode <day> [--benchmark]
 ```
 
-For example, to run the solution for Day 3 with benchmarking:
+For example, to run the solution for Day 4 with benchmarking:
 
 ```bash
-swift run AdventOfCode 3 --benchmark
+swift run AdventOfCode 4 --benchmark
 ```
 
 ## Acknowledgments
